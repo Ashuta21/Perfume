@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ሀላል ሽቶ መደብር | አዲስ አበባ | ኢትዮጵያ</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- WOW.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.css">
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --secondary-color: #f39c12;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --accent-color: #3498db;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: var(--dark-color);
+            font-weight: 500;
+            margin: 0 8px;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .hero-section {
+            background: url('https://www.transparenttextures.com/patterns/arabesque.png') repeat, linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(242,242,242,0.9) 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            z-index: 2;
+            position: relative;
+        }
+        
+        .hero-title {
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .hero-subtitle {
+            color: var(--dark-color);
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 30px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #7d3c98;
+            border-color: #7d3c98;
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 30px;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .section-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--secondary-color);
+            bottom: -10px;
+            left: 0;
+        }
+        
+       
+        
+        
+        .feature-box {
+            padding: 30px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            text-align: center;
+            height: 100%;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .about-section {
+            background-color: var(--light-color);
+            padding: 80px 0;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(142, 68, 173, 0.1) 100%);
+            padding: 80px 0;
+        }
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 15px;
+        }
+        
+        .form-control {
+            padding: 12px 15px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(142, 68, 173, 0.25);
+        }
+        
+        .footer {
+            background-color:#000;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+       
+        
+        .footer-links a {
+            color: #adb5bd;
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 40px;
+            color: #adb5bd;
+        }
+        
+        .live-support {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+        }
+        
+       
+        
+        .floating-text {
+            position: absolute;
+            right: 70px;
+            background-color: white;
+            padding: 8px 15px;
+            border-radius: 30px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            font-weight: 500;
+            color: var(--dark-color);
+            white-space: nowrap;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        
+        .support-btn:hover .floating-text {
+            opacity: 1;
+            right: 80px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+                text-align: center;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+        
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand wow fadeIn" href="#">
+                <i class="fas fa-spa me-2"></i>ሀላል ሽቶዎች
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item wow fadeIn" data-wow-delay="0.1s">
+                        <a class="nav-link" href="#home">መነሻ</a>
+                    </li>
+                    <li class="nav-item wow fadeIn" data-wow-delay="0.2s">
+                        <a class="nav-link" href="#products">ምርቶች</a>
+                    </li>
+                    <li class="nav-item wow fadeIn" data-wow-delay="0.3s">
+                        <a class="nav-link" href="#about">ስለ እኛ</a>
+                    </li>
+                    <li class="nav-item wow fadeIn" data-wow-delay="0.4s">
+                        <a class="nav-link" href="#contact">አግኙን</a>
+                    </li>
+                </ul>
+                <div class="ms-3 wow fadeIn" data-wow-delay="0.5s">
+                    <a href="#products" class="btn btn-outline-primary">አሁን ይግዙ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content wow fadeInLeft">
+                    <h1 class="hero-title">እንኳን ወደ ሀላል ሽቶ በደህና መጡ</h1>
+                    <p class="hero-subtitle">100% ጥራት ያላቸው እና አልኮል ያልተቀላቀለባቸው ሀላል ሽቶዎችን እኛ ጋር ያገኛሉ። በሙሉ ኢትዮጵያ ውስጥ የሚያዙትን ሽቶ በፍጥነት እንልካለን።</p>
+                    <div class="d-flex gap-3">
+                        <a href="#products" class="btn btn-primary mt-2">ምርቶችን ይመልከቱ</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInRight mt-3">
+                    <img src="https://scentido.com/cdn/shop/files/Palladium-Store_21cfdcaa-bac6-449f-957f-1c98b9503e67_1080x.jpg?v=1651281120" alt="ሽቶ ጠርሙሶች" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>100% ሀላል የተረጋገጠ</h3>
+                        <p>ሁሉም ሽቶዎቻችን አልኮል ወይም ሀራም ንጥረ ነገሮች የልተቀላቀሉ እና የተረጋገጡ ነቸው።</p>
+                    </div>
+                </div>
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>ኦንላይን ተእዛዝ</h3>
+                        <p>በመላው ኢትዮጵያ ከተሞች አዲስ አበባ ፤ ደሬዳዋ ፤ አዋሳ ፤ ደሴ ፤ ባህርዳር ፤ ሀረር ፤ እንዲሁም ሌሎች ከተሞች ተዛዝዎን እንልካለን።</p>
+                    </div>
+                </div>
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>ተፈጥሯዊ ንጥረ ነገሮች</h3>
+                        <p>ሽቶዎቻችን ረጅም ጊዜ የሚቆይ እና ውብ ሽታ እና ጥራት ያላቸው ከተፈጥሯዊ ንጥረ ነገሮች በቻ የተሰሩ ናቸው።</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+<section class="py-5 bg-light" id="products">
+    <div class="container">
+        <h2 class="text-center section-title mb-3">የሀላል ሽቶዎች ስብስብ</h2>
+        <p class="text-center text-muted mb-5">የእኛን የሀላል ሽቶዎች ስብስብ ያስሱ</p>
+        
+        <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://cdn.dotpe.in/longtail/store-items/8591068/TUwxBXgI.webp" class="card-img-top" alt="ሮያል ኡድ">
+                        <span class="position-absolute top-0 start-0 m-2 badge bg-success">ነፃ መላኪያ</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">ሮያል ኡድ</h5>
+                        <div class="mb-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">4500 ብር</span>
+                            <button class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://www.shaikhsaeed.com/media/catalog/product/cache/4a26ccee8717f81e8cea05b952b403b5/a/m/amber-rose-1200-x-1200.jpg" class="card-img-top" alt="አምበር ሮዝ">
+                        <span class="position-absolute top-0 start-0 m-2 badge bg-success">ነፃ መላኪያ</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">አምበር ሮዝ</h5>
+                        <div class="mb-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">5200 ብር</span>
+                            <button class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://www.kvapunisa.lt/cdn/shop/files/s-l1600-3.jpg?v=1731573416" class="card-img-top" alt="ማስክ ጎልድ">
+                        <span class="position-absolute top-0 start-0 m-2 badge bg-success">ነፃ መላኪያ</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">ማስክ ጎልድ</h5>
+                        <div class="mb-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">4800 ብር</span>
+                            <button class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://static.wixstatic.com/media/c837a6_748eb14417e049899f171bc21dd54995~mv2.jpg/v1/fit/w_320,h_320,q_90/c837a6_748eb14417e049899f171bc21dd54995~mv2.jpg" class="card-img-top" alt="ጃስሚን ብሪዝ">
+                        <span class="position-absolute top-0 start-0 m-2 badge bg-success">ነፃ መላኪያ</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">ጃስሚን ብሪዝ</h5>
+                        <div class="mb-3 text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold">3900 ብር</span>
+                            <button class="btn btn-sm btn-outline-primary"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-primary px-4">ሁሉንም ምርቶች ይመልከቱ</a>
+        </div>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 wow fadeInLeft">
+                    <img src="https://scentido.com/cdn/shop/files/Palladium-Store_21cfdcaa-bac6-449f-957f-1c98b9503e67_1080x.jpg?v=1651281120" alt="ስለ እኛ" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6 wow fadeInRight">
+                    <h2 class="section-title">ስለ የሀላል ሽቶ መደብራችን</h2>
+                    <p>ሀላል ሽቶ በአዲስ አበባ፣ ኢትዮጵያ የሚገኝ የሸቶ መደብር ነው ተልእኳችን በሙሉ አገር ውስጥ ከፍተኛ ጥራት ያለው የሀላል ሽቶዎችን ለደንበኞች ማቅረብ ነው።</p>
+                    <p>ሁሉም ሽቶዎቻችን ተፈጥሯዊ ንጥረ ነገሮች እና አስፈላጊ ዘይቶች በመጠቀም የተሰሩ ሲሆን አልኮል እና ማንኛውም ሀራም ንጥረ ነገሮች የሌለባችው ናቸው።</p>
+                    <p>በልዩ የደንበኛ አገልግሎት እና ፈጣን በሙሉ አገር አቀራረብ እንመሰገናለን። በአዲስ አበባ፣ ወይም በማንኛውም ከተማ ቢኖሩ፣ የሀላል ሽቶዎቻችንን ወዳሉበት ከተማ እንልካለን።</p>
+                    <div class="mt-4">
+                        <a href="#contact" class="btn btn-primary me-3">አግኙን</a>
+                        <a href="#products" class="btn btn-outline-primary">ምርቶቻችን</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title wow fadeIn">ደንበኞቻችን ምን ይላሉ?</h2>
+            <p class="text-center mb-5 wow fadeIn">በሙሉ ኢትዮጵያ ከሚገኙ ደንበኞቻችን የተሰሙ አስተያየቶች</p>
+            
+            <div class="row">
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text">"የሮያል ኡድ ሽቶ በጣም አስደናቂ ነው! ሽታው ሙሉ ቀን ይቆያል እና ጥራቱ የሚገርም ነው. በኢትዮጵያ ውስጥ ሀላል ሽቶዎችን በማግኘቴ በጣም ደስተኛ ነኝ።"</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle me-3" width="50" alt="ደንበኛ">
+                                <div>
+                                    <h6 class="mb-0">አሚና መሀመድ</h6>
+                                    <small class="text-muted">አዲስ አበባ</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text">"ጃስሚን ብሪዝን ለድሬዳዋ በ2 ቀናት ውስጥ ደረሰልኝ። ኦርጅናል እንደታሸገ እና ረጅም ጊዜ የሚቆይ ነው አመሰኛለሁ።"</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="https://randomuser.me/api/portraits/women/30.jpg" class="rounded-circle me-3" width="50" alt="ደንበኛ">
+                                <div>
+                                    <h6 class="mb-0">ሊዲያ አበበ</h6>
+                                    <small class="text-muted">ድሬዳዋ</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="card-text">"ማስክ ጎልድ ሽቶ ገዝቻለው በጣም አስደሳች ጠረን እና ጥራትን የተላበሰ ነው።</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="https://randomuser.me/api/portraits/men/5.jpg" class="rounded-circle me-3" width="50" alt="ደንበኛ">
+                                <div>
+                                    <h6 class="mb-0">አህመድ አሊ</h6>
+                                    <small class="text-muted">ባህር ዳር</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="text-center section-title wow fadeIn">አግኙን</h2>
+            <p class="text-center mb-5 wow fadeIn">ለጥያቄዎች ወይም ትዕዛዞች ያግኙን</p>
+            
+            <div class="row">
+                <div class="col-lg-5 wow fadeInLeft">
+                    <div class="contact-info">
+                        <h4 class="mb-4">የእኛ መረጃ</h4>
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-map-marker-alt contact-icon mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">አድራሻ</h5>
+                                <p class="mb-0">ቦሌ መንገድ, አዲስ አበባ, ኢትዮጵያ</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-phone-alt contact-icon mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">ስልክ</h5>
+                                <p class="mb-0">+251 9100000000000000</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-envelope contact-icon mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Email</h5>
+                                <p class="mb-0">info@halalperfumeset.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <i class="fas fa-clock contact-icon mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">የስራ ሰአት</h5>
+                                <p class="mb-0">ከሰኞ - ቅዳሜ: 3:00 AM - 12:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7 animate__animated animate__fadeInRight">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="mb-4">መልእክት ይላኩልን</h4>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="ስም" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" placeholder="ኢሜይል" required>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control" placeholder="ስለ">
+                                <textarea class="form-control" rows="5" placeholder="መልእክት" required></textarea>
+                                <button type="submit" class="btn btn-primary">መልእክት ይላኩ</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center animate__animated animate__fadeIn">
+                    <h3 class="mb-3">ለ አዳዲስ ምርቶች እና ዜናውች</h3>
+                    <p class="mb-4">አዳዲስ ምርቶች እና ቅናሾች ሲኖሩ መልእክት እንዲደርስዎ እዚህ ይመዝገቡ.</p>
+                    <form class="row g-2 justify-content-center">
+                        <div class="col-md-8">
+                            <input type="email" class="form-control" placeholder="ኢሜይል">
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary w-100">ይመዝገብ</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Footer -->
+<footer class="footer py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <h3 class="h5"><i class="fas fa-spa me-2"></i>ሀላል ሽቶዎች</h3>
+                <p>ሀላል ሽቶ በአዲስ አበባ፣ ኢትዮጵያ የሚገኝ የሸቶ መደብር ነው ተልእኳችን በሙሉ አገር ውስጥ ከፍተኛ ጥራት ያለው ሽቶዎችን ለደንበኞች ማቅረብ ነው።</p>
+                <div class="mt-4">
+                    <a href="#" class="btn btn-sm btn-outline-secondary me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="btn btn-sm btn-outline-secondary me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="btn btn-sm btn-outline-secondary me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="btn btn-sm btn-outline-secondary"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h3 class="footer-title">ፈጣን አገናኞች</h3>
+                <div class="footer-links">
+                    <a href="#home">መነሻ ገጽ</a>
+                    <a href="#products">ምርቶች</a>
+                    <a href="#about">ስለ እኛ</a>
+                    <a href="#contact">አግኙን</a>
+                    <a href="#">ጥያቄዎች</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4 animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                <h3 class="footer-title">ምርቶች</h3>
+                <div class="footer-links">
+                    <a href="#">ለወንዶች</a>
+                    <a href="#">ለሴቶች</a>
+                    <a href="#">አዲስ የመጣ</a>
+                    <a href="#">በብዛት የሚሸጡ</a>
+                    <a href="#">ስጦታ ስብስቦች</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4 animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                <h3 class="footer-title">የድርጅት መረጃ</h3>
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-map-marker-alt me-2"></i> ቦሌ መንገድ, አዲስ አበባ</a>
+                    <a href="#"><i class="fas fa-phone-alt me-2"></i> +251 912 345 678</a>
+                    <a href="#"><i class="fas fa-envelope me-2"></i> info@halalperfumeset.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center pt-3">
+            <p class="mb-0 small">&copy; 2023 ሀላል ሽቶዎች መደብር. ሁሉም መብቶች የተጠበቁ ናቸው.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap 5 JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script>
+    // Animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const animateElements = document.querySelectorAll('.animate__animated');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const animation = entry.target.getAttribute('class').split('animate__')[1];
+                    entry.target.classList.add('animate__' + animation);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        animateElements.forEach(element => {
+            observer.observe(element);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white');
+                navbar.classList.add('shadow-sm');
+            } else {
+                navbar.classList.remove('bg-white');
+                navbar.classList.remove('shadow-sm');
+            }
+        });
+    });
+</script>
+</body>
+</html>
